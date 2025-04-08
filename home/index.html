@@ -10,34 +10,35 @@
     <div id="divecontiner">
       <div id="diveone">
         <div id="hlink">
-          <h3>Mortage Calculator</h3>
+          <h3 style="color: hsl(202, 55%, 16%);">Mortage Calculator</h3>
           <a href="">ClearAll</a>
         </div>
+        <br>
         <div id="inpout">
           <h5>Mourtage Amount</h5>
-          <input type="text" placeholder="£" />
+          <input id="po"  type="number"   placeholder= "£" />
         </div>
         <section>
           <div id="inputt">
             <h5>Mourtage term</h5>
-            <input type="text" placeholder="years" />
+            <input type="number" placeholder="years" />
             </div>
             <div id="hinput">
             <h5>Interest Rate</h5>
-            <input type="text" placeholder="%" />
+            <input  type="number" placeholder="%" />
           </div>
         </section>
         <section id="hradio">
           <h5>Mortage Type</h5>
           <div id="inputone">
-            <input type="radio" />Repayments
+            <input type="radio" name="o"/>Repayments
           </div>
           <div id="inputtwo">
-            <input type="radio"/>Interest Only
+            <input type="radio" name="o"/>Interest Only
           </div>
         </section>
         <br />
-        <button>
+        <button  onclick="calcul()">
           <img src="/images/icon-calculator.svg" width="17px"  alt="">
           calculate Repayments
         </button>
@@ -52,5 +53,6 @@
             see what your monthly repayments woild be.</p>
       </div> 
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

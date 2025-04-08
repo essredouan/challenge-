@@ -1,5 +1,10 @@
+/* General Reset */
+* {
+  margin: 1.5%;
+}
+
 body {
-  background-color:  hsl(203, 41%, 72%);
+  background-color: hsl(203, 41%, 72%);
   margin: 0;
   height: 100vh;
   display: flex;
@@ -8,6 +13,7 @@ body {
   padding: 0;
   flex-wrap: wrap;
 }
+
 #divecontiner {
   background-color: hsl(0, 0%, 100%);
   display: flex;
@@ -15,8 +21,8 @@ body {
   width: 50vw;
   height: 50vh;
   border-radius: 10px;
-
 }
+
 #diveone {
   background-color: hsl(0, 0%, 100%);
   width: 50%;
@@ -24,10 +30,11 @@ body {
   border-radius: 10px 0px 0px 10px;
   margin: 0;
   padding: 0;
-  
+  color: hsl(203, 41%, 72%);
 }
+
 #divetwo {
- background-color: hsl(202, 55%, 16%); 
+  background-color: hsl(202, 55%, 16%);
   width: 50%;
   height: 50vh;
   border-radius: 0px 10px 10px 40px;
@@ -38,98 +45,87 @@ body {
   justify-content: center;
   align-items: center;
 }
-#divetwo img{
+
+#divetwo img {
   width: 100px;
 }
-#hpp{
+
+#hpp {
   color: aliceblue;
 }
-#hpp h4{
+
+#hpp h4 {
   text-align: center;
 }
-#hpp p{
- color:hsl(200, 26%, 54%) ;
- text-indent: 10px;
- font-size: 16px;
+
+#hpp p {
+  color: hsl(200, 26%, 54%);
+  text-indent: 10px;
+  font-size: 16px;
 }
-#space{
-  color: black;
-  text-indent: 20px;
-}
+
 #hlink {
   display: flex;
   justify-content: space-between;
 }
+
 #hlink a {
   display: flex;
   align-items: center;
 }
+
 #inpout input {
-  width: 360px;
+  width: 90%;
+  max-width: 400px;
+  height: 25px;
   border-radius: 5px;
-  border: 1px solid;
-  border-color: rgba(33, 24, 24, 0.673);
-  height: 26px;
+  border: 1px solid rgba(33, 24, 24, 0.673);
 }
+
 #inpout input::placeholder {
   padding: 10px;
 }
+
 section {
   display: flex;
 }
-#inputt input {
-  margin: 0px;
-  width: 175px;
-  border-radius: 5px;
-  border: 1px solid;
-  border-color: rgba(33, 24, 24, 0.673);
-  height: 26px;
-}
-#inputt input::placeholder {
-  text-align: end;
-  padding: 10px;
-}
+
+#inputt input,
 #hinput input {
   margin: 0px;
-  width: 175px;
+  width: 92%;
+  max-width: 400px;
   border-radius: 5px;
-  border: 1px solid;
-  border-color: rgba(33, 24, 24, 0.673);
-  height: 26px;
+  border: 1px solid rgba(33, 24, 24, 0.673);
+  height: 25px;
 }
+
+
+#inputt input::placeholder,
 #hinput input::placeholder {
   text-align: end;
   padding: 10px;
 }
+
 #hradio {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   justify-content: space-between;
-  height: 25%;
+  height: 27%;
+}
 
-}
-#hradio #inputone {
+#hradio #inputone,
+#inputtwo {
   background-color: rgb(255, 255, 255);
-  border: 1px solid;
-  border-color: rgba(33, 24, 24, 0.673);
-  width: 360px;
-  height: 26px;
-  border-radius: 5px;
-  
-}
-h5 {
-  color: rgba(0, 0, 0, 0.659);
-}
- #inputtwo {
-  background-color: rgb(255, 255, 255);
-  border: 1px solid;
-  border-color: rgba(0, 0, 0, 0.618);
-  width: 360px;
-  height: 26px;
+  border: 1px solid rgba(33, 24, 24, 0.673);
+  width: 92%;
+  max-width: 400px;
+  height: 28px;
   border-radius: 5px;
 }
+
 button {
   display: flex;
   align-items: center;
@@ -141,14 +137,43 @@ button {
   padding: 15px;
 }
 
-* {
-  margin: 5px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-@media (max-width: 700px) {
-  body{
-    display: flex;
-    flex-wrap: wrap;
+@media (max-width: 768px) {
+  #divecontiner {
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+  }
+
+  #diveone,
+  #divetwo {
+    width: 100%;
+    height: 50vh;
+    border-radius: 0px;
+    padding-bottom: 20px;
+  }
+
+  #inpout input,
+  #inputt input,
+  #hinput input,
+  #hradio #inputone,
+  #inputtwo {
+    width: 100%;
+    height: 27px;
+  }
+
+  button {
+    width: 50%;
+  }
+
+  #hlink {
+    display: block;
+  }
+
+  section {
+    display: block;
+  }
+
+  * {
+    margin: 0.5%;
   }
 }
